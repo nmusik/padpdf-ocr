@@ -9,4 +9,4 @@ PaddleOCR for Chinese pdf
 ## Usage
 `python pdf-ocr.py <pdf file path>`
 ## Example Results
-!(Example)[https://github.com/nmusik/padpdf-ocr/blob/main/docs/examples/SapF.png?raw=true]
+![Example](https://github.com/nmusik/padpdf-ocr/blob/main/docs/examples/SapF.png?raw=true)
