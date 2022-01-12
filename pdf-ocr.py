@@ -42,5 +42,5 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         url = sys.argv[1]
     else:
-        url = "./docs/SapF.pdf"
+        url = "./docs/examples/SapF.pdf"
     pdf_ocr(url)
