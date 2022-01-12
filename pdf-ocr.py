@@ -1,10 +1,4 @@
-﻿import fitz
-from paddleocr import PaddleOCR
-# from paddleocr import PPStructure
-import logging
-import sys
-import cv2
-import numpy as np
+﻿import numpy as np
 
 
 logger = logging.getLogger()
@@ -20,7 +14,7 @@ def pdf_ocr(url):
         logger.error(E)
 
     out_url = '/'.join(url.split("/")[:-1]) + "/" + '.'.join(url.split("/")[-1].split(".")[:-1]) + '_ocr.md'
-    with open(out_url, 'a') as f:
+    with open(out_url, 'w') as f:
         for page in doc:
             pix = page.get_pixmap(
             colorspace=fitz.csGRAY,
@@ -35,7 +29,7 @@ def pdf_ocr(url):
             # rst = pStru(img)
             for e in rst[1]:
                 f.write(e[0])
-            f.write("\n\t\t\t\t第 %i 页\n" % page.number+1)
+            f.write("\n\t\t\t\t第 %i 页\n" % (1 + page.number))
         f.close()
 
 
@@ -44,6 +38,9 @@ def pdf_ocr(url):
 
 
 if __name__ == "__main__":
-    if 
-    url = "I:/Misc/CV/SapE.pdf"
+    print(sys.argv[0])
+    if len(sys.argv) > 1:
+        url = sys.argv[1]
+    else:
+        url = "./docs/SapF.pdf"
     pdf_ocr(url)
