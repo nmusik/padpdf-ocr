@@ -7,14 +7,14 @@ pOCR = PaddleOCR(type='STRUCTURE',lang='ch')
 mat = fitz.Matrix(4.0, 4.0)
 
 def pdf_ocr(url):
-    print(url)
+    # print(url)
     try:
         doc = fitz.open(url)
     except Exception as E:
         logger.error(E)
 
     out_url = '/'.join(url.split("/")[:-1]) + "/" + '.'.join(url.split("/")[-1].split(".")[:-1]) + '_ocr.md'
-    with open(out_url, 'w') as f:
+    with open(out_url, 'w', encoding='utf-8') as f:
         for page in doc:
             pix = page.get_pixmap(
             colorspace=fitz.csGRAY,
