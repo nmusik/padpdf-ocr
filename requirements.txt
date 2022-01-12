@@ -1,0 +1,4 @@
+cv2
+pymupdf
+numpy
+paddleocr==2.2.1
