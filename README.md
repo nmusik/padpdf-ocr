@@ -8,5 +8,5 @@ PaddleOCR for Chinese pdf
 为没有目录的pdf文件增加识别的目录。
 ## Usage
 `python pdf-ocr.py <pdf file path>`
-## Results
-[[./docs/examples/SapF.png]]
+## Example Results
+!()[https://github.com/nmusik/padpdf-ocr/blob/main/docs/examples/SapF.png]
